@@ -28,14 +28,17 @@ class ViewController: UIViewController {
   }
 
   @IBAction func convertButtonPressed(sender: UIButton) {
-    let sizeFromTextField = mensShoeSizeTextField.text
-    let numberFromTextField = sizeFromTextField.toInt()
-    var integerFromtextField = numberFromTextField!
+//    let sizeFromTextField = mensShoeSizeTextField.text
+//    let numberFromTextField = sizeFromTextField.toInt()
+//    var integerFromtextField = numberFromTextField!
+
+    let sizeFromTextField = mensShoeSizeTextField.text.toInt()!
+ 
     let conversionConstant = 30
-    integerFromtextField += conversionConstant
     mensConvertedShoeSizeLabel.hidden = false
-    let stringWithUpdatedShoeSize = "\(integerFromtextField)"
-    mensConvertedShoeSizeLabel.text = stringWithUpdatedShoeSize
+   
+    mensConvertedShoeSizeLabel.text = "\(sizeFromTextField + conversionConstant)"+" in European Shoe Size"
+    
   }
 
  
